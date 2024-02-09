@@ -1,0 +1,47 @@
+#userinfo {
+  display: flex;
+  align-items: center;
+}
+
+.userinfo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+#logout {
+  color: #aaa;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para el tema claro */
+.light-theme {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000; /* Texto negro */
+}
+
+.light-theme nav a {
+  color: #000000; /* Enlaces en negro */
+}
+
+.light-theme button {
+  background-color: #ffffff; /* Botón con fondo blanco */
+  color: #000000; /* Texto negro en el botón */
+}
+
+/* Estilos para el tema oscuro */
+.dark-theme {
+  background-color: #121212; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+.dark-theme nav a {
+  color: #ffffff; /* Enlaces en blanco */
+}
+
+.dark-theme button {
+  background-color: #121212; /* Botón con fondo oscuro */
+  color: #ffffff; /* Texto blanco en el botón */
+}
+
