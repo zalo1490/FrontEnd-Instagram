@@ -1,0 +1,10 @@
+#avatarinfo {
+    display: flex;
+    align-items:flex-end;
+  }
+  
+  .avatarinfo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+  }

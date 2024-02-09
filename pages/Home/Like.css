@@ -1,0 +1,81 @@
+.Btn {
+  width: 180px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.leftContainer {
+  width: 60%;
+  height: 100%;
+  background-color: rgb(238, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.leftContainer .like {
+  width:2px;
+  color: white;
+  font-weight:bold;
+}
+
+.likeCount {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(238, 0, 0);
+  font-weight: 600;
+  position: relative;
+  background-color: white;
+}
+
+.likeCount::before {
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  left: -4px;
+}
+
+.Btn:hover .leftContainer {
+  background-color: rgb(219, 0, 0);
+}
+
+.Btn:active .leftContainer {
+  background-color: rgb(201, 0, 0);
+}
+
+.Btn:active .leftContainer svg {
+  transform: scale(1.15);
+  transform-origin: top;
+}
+
+
+/*
+.like {
+  border: 1px solid black;
+  border-radius: 100%;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.like.active {
+  background-color: rgb(220, 33, 0);
+  align-items: center;
+  
+} */
