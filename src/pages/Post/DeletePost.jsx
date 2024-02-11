@@ -1,5 +1,6 @@
 import React from "react";
 import { useUser } from "../../UserContext";
+import { FormattedMessage } from "react-intl";
 
 const DeletePost = ({ postId, onSuccess }) => {
   const [user] = useUser();
@@ -18,7 +19,11 @@ const DeletePost = ({ postId, onSuccess }) => {
     }
   };
 
-  return <button onClick={handleDelete}>Eliminar Post</button>;
+  return (
+    <button className="button" onClick={handleDelete}>
+      <FormattedMessage id="post.deletePost" />
+    </button>
+  );
 };
 
 export default DeletePost;
