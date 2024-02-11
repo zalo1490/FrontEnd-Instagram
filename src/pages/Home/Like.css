@@ -7,15 +7,15 @@
   border: none;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+  box-shadow: 5px 5px 10px rgba(93, 66, 66, 0.089);
   cursor: pointer;
   background-color: transparent;
 }
 
 .leftContainer {
-  width: 60%;
+  width: 30%;
   height: 100%;
-  background-color: rgb(238, 0, 0);
+  background-color: rgb(238, 0, 171);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,18 +23,18 @@
 }
 
 .leftContainer .like {
-  width:2px;
+  width:0.5px;
   color: white;
   font-weight:bold;
 }
 
 .likeCount {
-  width: 40%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(238, 0, 0);
+  color: rgb(238, 0, 171);
   font-weight: 600;
   position: relative;
   background-color: white;
@@ -51,11 +51,11 @@
 }
 
 .Btn:hover .leftContainer {
-  background-color: rgb(219, 0, 0);
+  background-color:  rgb(238, 0, 171);
 }
 
 .Btn:active .leftContainer {
-  background-color: rgb(201, 0, 0);
+  background-color:  rgb(238, 0, 171);
 }
 
 .Btn:active .leftContainer svg {
@@ -64,18 +64,4 @@
 }
 
 
-/*
-.like {
-  border: 1px solid black;
-  border-radius: 100%;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
 
-.like.active {
-  background-color: rgb(220, 33, 0);
-  align-items: center;
-  
-} */

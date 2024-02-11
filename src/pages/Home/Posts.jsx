@@ -3,10 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Posts.css";
 import Like from "./Like";
 import DeletePost from "../Post/DeletePost";
+import { FormattedMessage } from "react-intl";
+import { useUser } from "../../UserContext";
 
-const Posts = ({ data }) => {
+const Posts = ({ data, onDelete, currentUser }) => {
   const style = {};
   const slug = data.description.toLowerCase().replaceAll(" ", "-");
+  const [user] = useUser();
   const navigate = useNavigate();
   const createdAt = new Date(data.createdAt);
   const currentDate = new Date();
@@ -19,42 +22,63 @@ const Posts = ({ data }) => {
     const differenceInDays = Math.floor(differenceInHours / 24);
     timeAgoText = `${differenceInDays} día${differenceInDays === 1 ? "" : "s"}`;
   } else {
-    timeAgoText = `${differenceInHours} hora${differenceInHours === 1 ? "" : "s"}`;
+    timeAgoText = `${differenceInHours} hora${
+      differenceInHours === 1 ? "" : "s"
+    }`;
   }
+
+  const handleDelete = () => {
+    if (data && data.id) {
+      onDelete(data.id);
+    }
+  };
 
   return (
     <>
-      <Link className="Posts" style={style} to={`/posts`}>
-        <h3>{data.description}</h3>
-        <div
-          className="Posts"
-          style={{
-            backgroundImage: `url("http://localhost:3000/${data.imagenURL}")`,
-          }}
-        >
-          <span className="author">
-            Por
-            <button
-              className="profile-button"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                navigate(`/profile/${data.userId}`);
-              }}
-            >
-              {data.username}
-            </button>
-          </span>
-          {" - "}
-          <span className="date">
-            <FormattedDate value={data.createdAt} month="long" day="numeric" />
-          </span>
-          {" - "}
-          <span className="time-ago"> Hace {timeAgoText}</span>
+      <Link className="PostLink" to={`/posts/${data.id}`}>
+        <div className="PostContainer">
+          <div
+            className="PostImage"
+            style={{
+              backgroundImage: `url("http://localhost:3000/${data.imagenURL}")`,
+            }}
+          ></div>
+          <div className="PostContent">
+            <h3>{data.description}</h3>
+            <div className="PostInfo">
+              <span className="author">
+                <FormattedMessage id="posts.author" />
+                <button
+                  className="profile-button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navigate(`/profile/${data.userId}`);
+                  }}
+                >
+                  {data.username}
+                </button>
+              </span>
+              <span className="date">
+                <FormattedMessage id="posts.date" />
+                <FormattedDate
+                  value={data.createdAt}
+                  month="long"
+                  day="numeric"
+                />
+              </span>
+              {" -"}
+              <span className="time-ago"> Hace {timeAgoText}</span>
+            </div>
+          </div>
         </div>
       </Link>
-      <Like postId={data.id} likes={data.likes} />
-      <DeletePost postId={data.id} />
+      <div className="PostActions">
+        <Like postId={data.id} likes={data.likes} />
+        {currentUser && currentUser.id == data.userId && (
+          <DeletePost postId={data.id} onSuccess={handleDelete} />
+        )}
+      </div>
     </>
   );
 };

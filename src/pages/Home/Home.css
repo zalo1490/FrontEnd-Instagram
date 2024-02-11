@@ -1,10 +1,19 @@
-
-#home h2 {
+h2 {
+  align-items: center;
+  margin: 100px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-#home .new-Posts-link {
+button {
+  margin: 10px 10px 30px;
+    display:inline-flex;
+    line-height: 20px;
+    position: relative;
+    max-width: 200px;
+  }
+
+.new-Posts-link {
   display: block;
   margin: auto;
   width: 120px;
