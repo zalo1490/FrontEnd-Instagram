@@ -1,47 +1,69 @@
-#userinfo {
-  display: flex;
+header {
+  width: 100%;
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 20px 0px;
+  display:flex;
   align-items: center;
+  justify-content:center;
+  background-color: white;
+}
+
+.userinfo {
+  margin: 2px 10px 10px;
+  font-weight:bolder;
+  color: #a9388d;
+  text-decoration: inherit;
+  place-items: center;
+}
+
+.lang {
+  margin: 2px 20px 20px;
+  background-color: rgb(255, 255, 255);
 }
 
 .userinfo img {
   width: 50px;
   height: 50px;
   border-radius: 50px;
+
 }
 
-#logout {
-  color: #aaa;
-  margin-left: 5px;
+.logout {
+  margin: 2px 15px 2px;
+  color: #21174f;
   cursor: pointer;
 }
 
-/* Estilos para el tema claro */
 .light-theme {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #000000; /* Texto negro */
+  z-index: 10;
+  background-color: #ffffff;
+  color: #000000; 
 }
 
 .light-theme nav a {
-  color: #000000; /* Enlaces en negro */
+  color: #000000;
 }
 
 .light-theme button {
-  background-color: #ffffff; /* Botón con fondo blanco */
-  color: #000000; /* Texto negro en el botón */
+  background-color: #ffffff; 
+  color: #000000; 
 }
 
-/* Estilos para el tema oscuro */
 .dark-theme {
-  background-color: #121212; /* Fondo oscuro */
-  color: #ffffff; /* Texto blanco */
+  z-index: 10;
+  background-color: #121212; 
+  color: #ffffff; 
 }
 
 .dark-theme nav a {
-  color: #ffffff; /* Enlaces en blanco */
+  color: #ffffff; /
 }
 
 .dark-theme button {
-  background-color: #121212; /* Botón con fondo oscuro */
-  color: #ffffff; /* Texto blanco en el botón */
+  background-color: #121212; 
+  color: #ffffff; 
 }
 

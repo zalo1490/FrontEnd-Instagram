@@ -1,29 +1,26 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { useLang } from "../IntlContext";
 import UserInfo from "../../Components/Header/UserInfo";
-import "./Header.css";
-import { listPosts } from "../../hooks/api";
 import { useUser } from "../../UserContext";
+import { FormattedMessage } from "react-intl";
+import "./Header.css";
 
 const Header = ({ setFiltros }) => {
   const [lang, setLang] = useLang();
   const [theme, setTheme] = useState("light");
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState([]);
-  const [user] = useUser(); // Utiliza useUser en su lugar
+  const [user] = useUser();
 
-  // Función para cambiar el tema
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
-  // Función para manejar cambios en el campo de búsqueda
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  // Función para manejar la búsqueda y la navegación a la página de resultados
   const handleSearch = async () => {
     setFiltros(searchTerm);
     setSearchTerm("");
@@ -31,16 +28,20 @@ const Header = ({ setFiltros }) => {
 
   return (
     <header className={theme === "light" ? "light-theme" : "dark-theme"}>
-         <nav>
+      <nav>
         <Link to="/">
           <button>
-            <span>Instragram</span>
+            <span>ClonInsta</span>
           </button>
         </Link>
-        <Link to="/posts">Publicar</Link>
       </nav>
+      <Link to="/posts">
+        <button>
+          <FormattedMessage id="header.post" />
+        </button>
+      </Link>
 
-      <span>
+      <span className="lang">
         <select value={lang} onChange={(e) => setLang(e.target.value)}>
           <option value="en">🇬🇧 en</option>
           <option value="es">🇪🇸 es</option>
@@ -54,12 +55,17 @@ const Header = ({ setFiltros }) => {
         onChange={handleSearchChange}
       />
 
-      <button onClick={handleSearch}>Buscar</button>
-
-      <button onClick={toggleTheme}>
-        {theme === "light" ? "Cambiar a tema oscuro" : "Cambiar a tema claro"}
+      <button onClick={handleSearch}>
+        <FormattedMessage id="header.search" />
       </button>
 
+      <button onClick={toggleTheme}>
+        {theme === "light" ? (
+          <FormattedMessage id="header.themeDark" />
+        ) : (
+          <FormattedMessage id="header.themeLight" />
+        )}
+      </button>
       <UserInfo />
     </header>
   );

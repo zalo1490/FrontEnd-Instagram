@@ -1,10 +1,61 @@
-#avatarinfo {
-    display: flex;
-    align-items:flex-end;
-  }
-  
-  .avatarinfo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 80px;
-  }
+#posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 32px;
+}
+
+h1 {
+  display: flex;
+  align-items: flex-end;
+  color:#a9388d;
+}
+
+.container .avatarinfo {
+  display:flex;
+  margin: 10px 10px 10px;
+  max-width: 0px;
+  max-height:100px;
+}
+
+.avatarinfo img {
+  display: flex;
+  align-items: flex-end;
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+}
+
+.posts img {
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  padding: 1px 1px 1px;
+  border-radius: 4px;
+}
+
+.avatarInput {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 8px;
+  border-color: #a9388d;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #fafafa;
+  color: black;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-left: 90px;
+}
+
+.container section {
+  font-weight:bolder;
+  color: #ab5e38;
+  text-decoration: inherit;
+  padding: 0.5em 1em 3em;
+  font-size: 1em;
+
+ 
+}

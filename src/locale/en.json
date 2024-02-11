@@ -1,4 +1,24 @@
 {
- "home.theme": "Current theme is {theme}",
- "home.welcome": "Welcome to Insta"
+  "home.theme": "Current theme is {theme}",
+  "home.welcome": "Welcome to Insta",
+  "header.post": "Post",
+  "avatar.profile": "Change photo",
+  "header.search": "Search",
+  "home.newPost": "New post",
+  "post.deletePost": "Delete post",
+  "post.createPost": "Post",
+  "login.account": "Don't have an account?",
+  "login.register": "Sign up",
+  "login.login": "Log in",
+  "home.newPosts": "New Posts",
+  "userInfo.login": "Log in",
+  "header.placeholderSearch": "Search",
+  "post.postAuthor": "By",
+  "register.singUp": "Sing up",
+  "register.account": "Have an account?",
+  "register.singIn": "Sing in",
+  "header.themeDark": "Dark theme",
+  "header.themeLight": "Light theme",
+  "posts.author": "By",
+  "posts.date": "On "
 }

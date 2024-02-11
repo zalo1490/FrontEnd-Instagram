@@ -1,28 +1,54 @@
-import { Link } from "react-router-dom"
-import { useMyInfo } from "../../hooks/api"
-import { useUser } from "./../../UserContext"
-import './Header.css'
+import { Link } from "react-router-dom";
+import { useMyInfo } from "../../hooks/api";
+import { useUser } from "./../../UserContext";
+import "./Header.css";
+import { FormattedMessage } from "react-intl";
 
 const UserInfo = () => {
-  const [user] = useUser()
+  const [user] = useUser();
 
-  if (user) return <UserInfoLoggedIn />
+  if (user) return <UserInfoLoggedIn />;
 
   return (
-    <Link to="/login">Iniciar sesión</Link>
-  )
-}
+    <button>
+      <Link to="/login">
+        <FormattedMessage id="userInfo.login" />
+      </Link>
+    </button>
+  );
+};
 
 const UserInfoLoggedIn = () => {
-  const [, setUser] = useUser()
-  const info = useMyInfo()
+  const [, setUser] = useUser();
+  const info = useMyInfo();
   return (
     <span className="userinfo">
-     <Link to={`/profile/${info.data.user.id}`}> {info.data.user.username}</Link> 
-      <img src={`http://localhost:3000/${info.data.user.avatar}`} /> 
-      <span className="logout" onClick={() => setUser()}>⏻</span>
-    </span>
-  )
-}
+      <img src={`http://localhost:3000/${info.data.user.avatar}`} />
+      <Link
+        to={`/profile/${info.data.user.id}`}
+        onClick={() =>
+          setTimeout(() => {
+            window.location.reload();
+          }, "100")
+        }
+      >
+        {" "}
+        {info.data.user.username}{" "}
+      </Link>
 
-export default UserInfo
+      <span className="logout" onClick={() => setUser()}>
+        <img
+          src="logout-21.svg"
+          alt="logout"
+          style={{
+            margin: "0 auto",
+            maxWidth: "20px",
+            maxHeight: "20px",
+          }}
+        />
+      </span>
+    </span>
+  );
+};
+
+export default UserInfo;

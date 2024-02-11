@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../../UserContext";
-import addImage from "/add-image.png";
+import addImage from "/add-fill-9-512.png";
 import { FormattedMessage } from "react-intl";
-import "../Profile/Profile.css";
+import "./Profile.css";
 
 const Avatar = () => {
   const [preview, setPreview] = useState();
@@ -24,31 +24,43 @@ const Avatar = () => {
     const res = await fetch("http://localhost:3000/users/avatar", {
       method: "PUT",
       headers: {
-        Authorization: `${user}`,
+        Authorization: `${user}`, 
       },
       body: fd,
     });
-    if (!user || !user.token) {
-      console.error("El usuario o el token es undefined.");
-    }
-
+  
     if (res.ok) {
-      const data = await res.json();
-      console.log(data.data.avatar);
-      navigate("/users/" + data.data.avatar);
-    }
-  };
-
+      window.location.reload();
+  } else {
+    console.error("Error al actualizar el avatar.");
+  }
+};
+    
   return (
-    <form onSubmit={handleSubmit} className="EditAvatar">
-      <label>
-        <img src={preview || addImage} />
-        <input type="file" onChange={handleChange} accept="image/*" />
+    <div>
+      <label htmlFor="fileInput">
+        <img
+          src={preview || addImage}
+          alt="Preview"
+          style={{
+            display: "block",
+            margin: "0 auto",
+            maxWidth: "20px",
+            maxHeight: "20px",
+          }}
+        />
       </label>
-      <button>
-        <FormattedMessage id="Subir foto de perfil" />
+      <input
+        id="fileInput"
+        type="file"
+        accept="image/*"
+        onChange={handleChange}
+        style={{ display: "none" }}
+      />
+      <button className="avatar" onClick={handleSubmit}>
+        <FormattedMessage id="avatar.profile" />
       </button>
-    </form>
+    </div>
   );
 };
 

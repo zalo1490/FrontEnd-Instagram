@@ -1,4 +1,23 @@
 {
-  "home.theme": "El tema actual es {theme}",
-  "home.welcome": "Bienvenido a Insta"
+  "home.theme": "Cambiar tema a {theme}",
+  "header.post": "Publicar",
+  "avatar.profile": "Cambiar foto de perfil",
+  "header.search": "Buscar",
+  "home.newPost": "Nueva publicación",
+  "post.deletePost": "Eliminar publicación",
+  "post.createPost": "Publicar",
+  "login.account": "¿No tienes cuenta?",
+  "login.register": "Regístrate",
+  "login.login": "Iniciar sesión",
+  "home.newPosts": "Publicaciones recientes",
+  "userInfo.login": "Iniciar sesión",
+  "header.placeholderSearch": "Buscar",
+  "post.postAuthor": "Por",
+  "register.singUp": "Regístrate",
+  "register.account": "¿Ya tienes cuenta?",
+  "register.singIn": "Inicia sesión",
+  "header.themeDark": "Tema oscuro",
+  "header.themeLight": "Tema claro",
+  "posts.author": "Por",
+  "posts.date": "El "
 }
