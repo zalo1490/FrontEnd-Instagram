@@ -67,14 +67,7 @@ const Posts = ({ data, onDelete, currentUser }) => {
                 />
               </span>
               {" -"}
-              {
-                idioma === "ES" ?
-                (
-                  <span className="time-ago"> Hace {timeAgoText}</span>
-                ) : (
-                  <span className="time-ago"> {timeAgoText} Ago</span>
-                )
-              }
+           <span className="time-ago"> Hace {timeAgoText}</span>
             </div>
           </div>
         </div>
