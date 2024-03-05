@@ -35,7 +35,7 @@ const Register = () => {
       
       <h2>
         <img src="icons8-insta.svg" alt="ClonInsta" />
-        Bienvenido a ClonInsta {registeredUsername}. Por favor revisa tu correo para que puedas validar tu usuario.
+        Bienvenido a ClonInsta {username}. Por favor revisa tu correo para que puedas validar tu usuario.
       </h2>
     );
   }
