@@ -38,7 +38,7 @@ const UserInfoLoggedIn = () => {
 
       <span className="logout" onClick={() => setUser()}>
         <img
-          src="logout-21.svg"
+          src="/logout-21.svg"
           alt="logout"
           style={{
             margin: "0 auto",
