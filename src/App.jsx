@@ -14,14 +14,8 @@ import "./App.css";
 
 function App() {
   const [filtros, setFiltros] = useState("");
-
-  console.log("API URL:", import.meta.env.VITE_API_URL);
   return (
     <div>
-      <Header
-        username={import.meta.env.VITE_USERNAME}
-        role={import.meta.env.VITE_ROLE}
-      />
       <>
         <Header setFiltros={setFiltros} />
         <ErrorBoundary key={location.key} fallback={<GenericError />}>

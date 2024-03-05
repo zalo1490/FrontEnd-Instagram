@@ -5,7 +5,7 @@ import addImage from "/add-fill-9-512.png";
 import { FormattedMessage } from "react-intl";
 import "./Profile.css";
 
-const Avatar = () => {
+const Avatar = ({ editable }) => {
   const [preview, setPreview] = useState();
   const [photo, setPhoto] = useState();
   const [user] = useUser();
@@ -24,32 +24,55 @@ const Avatar = () => {
     const res = await fetch("http://localhost:3000/users/avatar", {
       method: "PUT",
       headers: {
-        Authorization: `${user}`, 
+        Authorization: `${user}`,
       },
       body: fd,
     });
-  
+
     if (res.ok) {
       window.location.reload();
-  } else {
-    console.error("Error al actualizar el avatar.");
-  }
-};
-    
+    } else {
+      console.error("Error al actualizar el avatar.");
+    }
+  };
+
   return (
     <div>
       <label htmlFor="fileInput">
-        <img
-          src={preview || addImage}
-          alt="Preview"
-          style={{
-            display: "block",
-            margin: "0 auto",
-            maxWidth: "20px",
-            maxHeight: "20px",
-          }}
-        />
+        {editable && (
+          <img
+            src={preview || addImage}
+            alt="Preview"
+            style={{
+              display: "block",
+              margin: "0 auto",
+              maxWidth: "20px",
+              maxHeight: "20px",
+            }}
+          />
+        )}
       </label>
+      {editable && (
+        <>
+          <input
+            id="fileInput"
+            type="file"
+            accept="image/*"
+            onChange={handleChange}
+            style={{ display: "none" }}
+          />
+          <button className="avatar" onClick={handleSubmit}>
+            <FormattedMessage id="avatar.profile" />
+          </button>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default Avatar;
+
+/*
       <input
         id="fileInput"
         type="file"
@@ -59,9 +82,5 @@ const Avatar = () => {
       />
       <button className="avatar" onClick={handleSubmit}>
         <FormattedMessage id="avatar.profile" />
-      </button>
-    </div>
-  );
-};
-
-export default Avatar;
+      </button> 
+*/

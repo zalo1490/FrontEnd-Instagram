@@ -39,8 +39,7 @@ const Home = ({ filtros }) => {
           </Link> 
         </h3> 
       )}
-      {posts && posts.map((e) => <Posts key={e.id} data={e} onDelete={handlePostDelete} currentUser={info.data?.user}
- />)}
+      {posts && posts.map((e) => <Posts key={e.id} data={e} onDelete={handlePostDelete} currentUser={info.data?.user} />)}
     </div>
   );
 };

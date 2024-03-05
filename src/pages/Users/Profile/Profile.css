@@ -5,6 +5,7 @@
 }
 
 h1 {
+  padding: 5rem 1rem 1rem;
   display: flex;
   align-items: flex-end;
   color:#a9388d;
