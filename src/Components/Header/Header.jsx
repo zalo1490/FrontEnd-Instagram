@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLang } from "../IntlContext";
 import UserInfo from "../../Components/Header/UserInfo";
@@ -21,6 +21,10 @@ const Header = ({ setFiltros }) => {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
+  useEffect(() => {
+    document.body.className = theme === "light" ? "light-theme" : "dark-theme";
+  }, [theme]);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -81,3 +85,4 @@ const Header = ({ setFiltros }) => {
 };
 
 export default Header;
+
