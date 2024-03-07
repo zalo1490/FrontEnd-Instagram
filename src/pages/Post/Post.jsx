@@ -1,13 +1,15 @@
-import { FormattedDate } from "react-intl";
-import { FormattedMessage } from "react-intl";
+import { FormattedDate, FormattedMessage } from "react-intl";
 import { usePostsById } from "../../hooks/api";
 import { useNavigate } from "react-router-dom";
 import Like from "../Home/Like";
+import DeletePost from "../Post/DeletePost";
+//import { useUser } from "../../UserContext";
 
-const Post = () => {
+const Post = ({ onDelete, currentUser }) => {
   const postId = window.location.pathname.split("/")[2];
   const result = usePostsById(postId);
   const data = result.data.post;
+  //const [user] = useUser();
   const navigate = useNavigate();
   const createdAt = new Date(data.createdAt);
   const currentDate = new Date();
@@ -24,6 +26,12 @@ const Post = () => {
       differenceInHours === 1 ? "" : "s"
     }`;
   }
+
+  const handleDelete = () => {
+    if (data && data.id) {
+      onDelete(data.id);
+    }
+  };
 
   return (
     <>
@@ -65,6 +73,9 @@ const Post = () => {
       </div>
       <div className="PostActions">
         <Like postId={data.id} likes={data.likes} />
+        {currentUser && currentUser.id == data.userId && (
+          <DeletePost postId={data.id} onSuccess={handleDelete} />
+        )}
       </div>
     </>
   );

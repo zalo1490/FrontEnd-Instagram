@@ -1,9 +1,9 @@
 import { FormattedDate, FormattedMessage } from "react-intl";
 import { Link, useNavigate } from "react-router-dom";
-import "./Posts.css";
 import Like from "./Like";
 import DeletePost from "../Post/DeletePost";
 import { useUser } from "../../UserContext";
+import "./Posts.css";
 
 const Posts = ({ data, onDelete, currentUser }) => {
   const style = {};
