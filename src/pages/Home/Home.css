@@ -1,6 +1,6 @@
 h2 {
   align-items: center;
-  margin: 100px;
+  margin: 70px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -20,4 +20,14 @@ button {
   padding: 5px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+  h2 {
+    align-items: center;
+    margin: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
 }

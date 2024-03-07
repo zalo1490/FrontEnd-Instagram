@@ -37,15 +37,15 @@ const Post = ({ onDelete, currentUser }) => {
     <>
       <div className="PostsContainer">
         <div
-          className="PostImage"
+          id="Post-Image"
           style={{
             backgroundImage: `url("http://localhost:3000/${data.imagenURL}")`,
           }}
         ></div>
-        <div className="PostContent">
+        <div className="Post-Content">
           <h3>{data.description}</h3>
-          <div className="PostInfo">
-            <span className="author">
+          <div className="Post-Info">
+            <span id="author">
               <FormattedMessage id="posts.author" />
               <button
                 className="profile-button"

@@ -8,7 +8,6 @@ import { MdDarkMode } from "react-icons/md";
 import { IoMdAdd } from "react-icons/io";
 import { SlSocialInstagram } from "react-icons/sl";
 import { CiSearch } from "react-icons/ci";
-
 import "./Header.css";
 
 const Header = ({ setFiltros }) => {

@@ -62,7 +62,6 @@ const Like = ({ postId, initialLiked, likes }) => {
           <span className="like"></span>
         </span>
         <span className="likeCount">
-          {" "}
           {n} {n === 1 ? "Like" : "Likes"}
         </span>
       </button>

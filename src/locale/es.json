@@ -1,8 +1,6 @@
 {
   "home.theme": "Cambiar tema a {theme}",
-  "header.post": "+",
   "avatar.profile": "Cambiar foto de perfil",
-  "header.search": "p",
   "home.newPost": "Nueva publicación",
   "post.deletePost": "Eliminar publicación",
   "post.createPost": "Publicar",
@@ -16,8 +14,6 @@
   "register.singUp": "Regístrate",
   "register.account": "¿Ya tienes cuenta?",
   "register.singIn": "Inicia sesión",
-  "header.themeDark": "Sol",
-  "header.themeLight": "Luna",
-  "posts.author": "Por",
-  "posts.date": "El "
+  "posts.author": "Por ",
+  "posts.date": " El "
 }

@@ -10,7 +10,7 @@ header {
   grid-template-areas: 
     "gohome   gohome  userinfo"
     "addpost  lang      theme"
-    "search   search    search";
+    "search   search    go";
   justify-items: center;
   align-items: center;
   background-color: white;
