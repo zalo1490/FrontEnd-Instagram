@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLang } from "../IntlContext";
 import UserInfo from "../../Components/Header/UserInfo";
 import { useUser } from "../../UserContext";
-import { FormattedMessage } from "react-intl";
+import { MdSunny } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
+import { IoMdAdd } from "react-icons/io";
+import { SlSocialInstagram } from "react-icons/sl";
 import { CiSearch } from "react-icons/ci";
+
 import "./Header.css";
 
 const Header = ({ setFiltros }) => {
@@ -17,6 +21,10 @@ const Header = ({ setFiltros }) => {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
+  useEffect(() => {
+    document.body.className = theme === "light" ? "light-theme" : "dark-theme";
+  }, [theme]);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -31,15 +39,16 @@ const Header = ({ setFiltros }) => {
   return (
     <header className={theme === "light" ? "light-theme" : "dark-theme"}>
       
+      
       <Link to="/" id="gohome">
          <button>
-           <span>ClonInsta</span>
+         <SlSocialInstagram />
          </button>
       </Link>
       
       <Link to="/posts" id="addpost">
         <button>
-          <FormattedMessage id="header.post" />
+        <IoMdAdd />
         </button>
       </Link>
 
@@ -65,9 +74,9 @@ const Header = ({ setFiltros }) => {
 
       <button onClick={toggleTheme} id="theme">
         {theme === "light" ? (
-          <FormattedMessage id="header.themeDark" />
+          <MdDarkMode />
         ) : (
-          <FormattedMessage id="header.themeLight" />
+          <MdSunny />
         )}
       </button>
       <UserInfo />
@@ -76,3 +85,4 @@ const Header = ({ setFiltros }) => {
 };
 
 export default Header;
+
