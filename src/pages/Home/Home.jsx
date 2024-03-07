@@ -7,6 +7,7 @@ import "./Home.css";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
+
 const Home = ({ filtros }) => {
   const [posts, setPosts] = useState([]);
   const [user] = useUser();
