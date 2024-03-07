@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useUser } from "../../UserContext";
-import { FormattedMessage } from "react-intl";
+import { FaRegTrashCan } from "react-icons/fa6";
 import Confirm from "../../Components/Confirm/Confirm";
+import "../Home/home.css";
 
 const DeletePost = ({ postId, onSuccess }) => {
   const [user] = useUser();
@@ -24,13 +25,13 @@ const DeletePost = ({ postId, onSuccess }) => {
 
   return (
     <>
-    <button className="button" onClick={()=>{
+    <button id="button-delete" onClick={()=>{
       setShowConfirm(true)
     }}>
-      <FormattedMessage id="post.deletePost" />
+     <FaRegTrashCan style={{color: "#d132a9"}} />
     </button>
     {showConfirm && (
-      <Confirm text="Cofirmas?" setShowConfirm={setShowConfirm} handleOk={handleDelete}/>
+      <Confirm  setShowConfirm={setShowConfirm} handleOk={handleDelete}/>
     )}
       </>
   );
@@ -39,6 +40,13 @@ const DeletePost = ({ postId, onSuccess }) => {
 export default DeletePost;
 
 /*
+     <div classname="card"></div>
+        <div id="fg">
+        <div class="card-content">
+    <p class="card-heading">Delete Post?</p>
+<p class="card-description">Quieres eliminar esta publicación?</p>
+  </div>
+
 <button class="bin-button">
   <svg
     xmlns="http://www.w3.org/2000/svg"

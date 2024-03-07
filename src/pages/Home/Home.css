@@ -5,11 +5,19 @@ h2 {
   margin-bottom: 20px;
 }
 
-button {
-    display:inline-flex;
-    line-height: 20px;
-    position: relative;
-    max-width: 200px;
+#button-delete {
+  width: 60px;
+  height: 50px;
+  margin: 0px 0px 0px 200px;
+  display:grid;
+  align-items: center;
+  justify-content:end;
+  border:0cap;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(93, 66, 66, 0.089);
+  cursor: pointer;
+  background-color: transparent;
   }
 
 .new-Posts-link {
