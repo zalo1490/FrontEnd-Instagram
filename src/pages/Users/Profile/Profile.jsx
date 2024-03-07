@@ -11,7 +11,6 @@ const Profile = () => {
   const posts = usePostsByUserId(userId);
   const [avatar, setAvatar] = useState(info.data.user.avatar);
   
-  
   return (
     <>
     <div className="container">

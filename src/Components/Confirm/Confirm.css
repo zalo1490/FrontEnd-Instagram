@@ -74,6 +74,7 @@
 
 .primary:hover {
   background-color: #a9388d;
+  color: white;
 }
 
 .secondary {

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useUser } from "../../UserContext";
 import { FormattedMessage } from "react-intl";
-import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");

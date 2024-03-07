@@ -48,6 +48,7 @@ const Avatar = ({ editable }) => {
               margin: "0 auto",
               maxWidth: "20px",
               maxHeight: "20px",
+              color: "#d132a9",
             }}
           />
         )}
