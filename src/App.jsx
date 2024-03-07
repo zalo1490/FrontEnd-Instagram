@@ -15,8 +15,7 @@ import "./App.css";
 function App() {
   const [filtros, setFiltros] = useState("");
   return (
-    <div>
-      <>
+    <>
         <Header setFiltros={setFiltros} />
         <ErrorBoundary key={location.key} fallback={<GenericError />}>
           <Suspense fallback={<Loading />}>
@@ -29,9 +28,8 @@ function App() {
               <Route path="/profile/:id" element={<Profile />} />
             </Routes>
           </Suspense>
-        </ErrorBoundary>
-      </>
-    </div>
+        </ErrorBoundary> 
+    </>
   );
 }
 

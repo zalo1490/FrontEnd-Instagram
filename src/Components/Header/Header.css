@@ -4,35 +4,63 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  padding: 30px 20px 0px;
-  display:flex;
+  display:grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    "gohome   gohome  userinfo"
+    "addpost  lang      theme"
+    "search   search    search";
+  justify-items: center;
   align-items: center;
-  justify-content:center;
   background-color: white;
 }
 
+#gohome {
+  grid-area: gohome;
+  justify-self: left;
+}
+
 .userinfo {
-  margin: 2px 10px 10px;
   font-weight:bolder;
   color: #a9388d;
   text-decoration: inherit;
   place-items: center;
+  grid-area: userinfo ;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+#addpost{
+  grid-area: addpost ;
 }
 
 .lang {
-  margin: 2px 20px 20px;
   background-color: rgb(255, 255, 255);
+  grid-area: lang ;
+}
+
+#search {
+  grid-area: search;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#theme {
+  grid-area: theme;
 }
 
 .userinfo img {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-
 }
 
 .logout {
-  margin: 2px 15px 2px;
   color: #21174f;
   cursor: pointer;
 }
@@ -65,5 +93,18 @@ header {
 .dark-theme button {
   background-color: #121212; 
   color: #ffffff; 
+  
+}
+
+@media (min-width: 700px) {
+  header {
+    flex-direction: row;
+    grid-template-rows: 2fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+      "gohome   addpost   lang      theme   userinfo"
+      "search   search    search    search  search";
+  }
+  
 }
 

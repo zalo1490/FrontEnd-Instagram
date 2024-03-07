@@ -1,9 +1,9 @@
 {
   "home.theme": "Current theme is {theme}",
   "home.welcome": "Welcome to Insta",
-  "header.post": "Post",
+  "header.post": "+",
   "avatar.profile": "Change photo",
-  "header.search": "Search",
+  "header.search": "p",
   "home.newPost": "New post",
   "post.deletePost": "Delete post",
   "post.createPost": "Post",
@@ -17,8 +17,8 @@
   "register.singUp": "Sing up",
   "register.account": "Have an account?",
   "register.singIn": "Sing in",
-  "header.themeDark": "Dark theme",
-  "header.themeLight": "Light theme",
+  "header.themeDark": "Sol",
+  "header.themeLight": "Luna",
   "posts.author": "By",
   "posts.date": "On "
 }

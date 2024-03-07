@@ -32,8 +32,7 @@ const UserInfoLoggedIn = () => {
           }, "100")
         }
       >
-        {" "}
-        {info.data.user.username}{" "}
+        {info.data.user.username}
       </Link>
 
       <span className="logout" onClick={() => setUser()}>

@@ -1,8 +1,8 @@
 {
   "home.theme": "Cambiar tema a {theme}",
-  "header.post": "Publicar",
+  "header.post": "+",
   "avatar.profile": "Cambiar foto de perfil",
-  "header.search": "Buscar",
+  "header.search": "p",
   "home.newPost": "Nueva publicación",
   "post.deletePost": "Eliminar publicación",
   "post.createPost": "Publicar",
@@ -16,8 +16,8 @@
   "register.singUp": "Regístrate",
   "register.account": "¿Ya tienes cuenta?",
   "register.singIn": "Inicia sesión",
-  "header.themeDark": "Tema oscuro",
-  "header.themeLight": "Tema claro",
+  "header.themeDark": "Sol",
+  "header.themeLight": "Luna",
   "posts.author": "Por",
   "posts.date": "El "
 }

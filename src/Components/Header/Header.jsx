@@ -4,6 +4,7 @@ import { useLang } from "../IntlContext";
 import UserInfo from "../../Components/Header/UserInfo";
 import { useUser } from "../../UserContext";
 import { FormattedMessage } from "react-intl";
+import { CiSearch } from "react-icons/ci";
 import "./Header.css";
 
 const Header = ({ setFiltros }) => {
@@ -21,45 +22,48 @@ const Header = ({ setFiltros }) => {
     setSearchTerm(e.target.value);
   };
 
-  const handleSearch = async () => {
+  const handleSearch = async (e) => {
+    e.preventDefault()
     setFiltros(searchTerm);
     setSearchTerm("");
   };
 
   return (
     <header className={theme === "light" ? "light-theme" : "dark-theme"}>
-      <nav>
-        <Link to="/">
-          <button>
-            <span>ClonInsta</span>
-          </button>
-        </Link>
-      </nav>
-      <Link to="/posts">
+      
+      <Link to="/" id="gohome">
+         <button>
+           <span>ClonInsta</span>
+         </button>
+      </Link>
+      
+      <Link to="/posts" id="addpost">
         <button>
           <FormattedMessage id="header.post" />
         </button>
       </Link>
 
       <span className="lang">
-        <select value={lang} onChange={(e) => setLang(e.target.value)}>
-          <option value="en">🇬🇧 en</option>
-          <option value="es">🇪🇸 es</option>
-        </select>
+      <select value={lang} onChange={(e) => setLang(e.target.value)}>
+        <option value="en">🇬🇧 en</option>
+        <option value="es">🇪🇸 es</option>
+      </select>
       </span>
+      
 
-      <input
+      <form onSubmit={handleSearch} id="search">
+        <input
         type="text"
         placeholder="Buscar..."
         value={searchTerm}
         onChange={handleSearchChange}
-      />
+        />
+        <button>
+        <CiSearch />
+        </button>
+      </form>
 
-      <button onClick={handleSearch}>
-        <FormattedMessage id="header.search" />
-      </button>
-
-      <button onClick={toggleTheme}>
+      <button onClick={toggleTheme} id="theme">
         {theme === "light" ? (
           <FormattedMessage id="header.themeDark" />
         ) : (
