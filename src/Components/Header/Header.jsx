@@ -5,7 +5,7 @@ import UserInfo from "../../Components/Header/UserInfo";
 import { useUser } from "../../UserContext";
 import { MdSunny } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
-import { RiImageAddFill } from "react-icons/ri";
+import { IoMdAdd } from "react-icons/io";
 import { SlSocialInstagram } from "react-icons/sl";
 import { CiSearch } from "react-icons/ci";
 
@@ -44,7 +44,7 @@ const Header = ({ setFiltros }) => {
       
       <Link to="/posts" id="addpost">
         <button>
-        <RiImageAddFill />
+        <IoMdAdd />
         </button>
       </Link>
 
