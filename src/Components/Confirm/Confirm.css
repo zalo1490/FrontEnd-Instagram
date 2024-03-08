@@ -12,38 +12,25 @@
 }
 
 #fg {
-  padding: 1rem;
+  padding: 1.5rem;
   border: 1px solid black;
   background-color: white;
-  opacity: 1;
   border-radius: 10px;
 }
 
-.card {
-  width: 300px;
-  height: fit-content;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 30px;
-  position: relative;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.068);
-}
 .card-content {
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
+
 .card-heading {
   font-size: 20px;
   font-weight: 700;
   color: rgb(27, 27, 27);
 }
+
 .card-description {
   font-weight: 400;
   color: rgb(26, 19, 19);
@@ -56,6 +43,7 @@
   justify-content: center;
   gap: 10px;
 }
+
 .card-button {
   width: 50%;
   height: 35px;
@@ -64,6 +52,7 @@
   cursor: pointer;
   font-weight: 600;
 }
+
 .primary {
   background-color: #a9388d;
   color: white;

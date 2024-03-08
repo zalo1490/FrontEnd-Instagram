@@ -20,8 +20,8 @@ header {
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 
     "gohome   gohome  userinfo"
-    "addpost  lang      theme"
-    "search   search    go";
+    "addpost  lang    theme"
+    "search   search  search";
   justify-items: center;
   align-items: center;
   background-color: white;
@@ -134,7 +134,7 @@ header, header::after {
 
 .dark-theme button {
   background-color: #121212; 
-  color: #ffffff; 
+  color: #ffffff;   
 }
 
 @media (min-width: 700px) {

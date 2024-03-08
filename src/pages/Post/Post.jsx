@@ -3,13 +3,13 @@ import { usePostsById } from "../../hooks/api";
 import { useNavigate } from "react-router-dom";
 import Like from "../Home/Like";
 import DeletePost from "../Post/DeletePost";
-//import { useUser } from "../../UserContext";
+import { useUser } from "../../UserContext";
 
 const Post = ({ onDelete, currentUser }) => {
   const postId = window.location.pathname.split("/")[2];
   const result = usePostsById(postId);
   const data = result.data.post;
-  //const [user] = useUser();
+  const [user] = useUser();
   const navigate = useNavigate();
   const createdAt = new Date(data.createdAt);
   const currentDate = new Date();
@@ -37,14 +37,14 @@ const Post = ({ onDelete, currentUser }) => {
     <>
       <div className="PostsContainer">
         <div
-          id="Post-Image"
+          className="Post-Image"
           style={{
             backgroundImage: `url("http://localhost:3000/${data.imagenURL}")`,
           }}
         ></div>
-        <div className="Post-Content">
+        <div className="PostContent">
           <h3>{data.description}</h3>
-          <div className="Post-Info">
+          <div className="PostInfo">
             <span id="author">
               <FormattedMessage id="posts.author" />
               <button
