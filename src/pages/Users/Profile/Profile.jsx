@@ -15,7 +15,7 @@ const Profile = () => {
     <>
     <div className="container">
       <div>
-        <h1>{info.data.user.username}</h1>
+        <h1 className="username">{info.data.user.username}</h1>
         <h4 className="avatarinfo">
           <form htmlFor="avatarInput">
             <img src={`http://localhost:3000/${avatar}`} alt="Avatar" />

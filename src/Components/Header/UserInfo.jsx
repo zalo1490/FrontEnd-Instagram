@@ -46,7 +46,7 @@ const UserInfoLoggedIn = () => {
       <button className="logout" onClick={() => setUser()}>
         <CgLogOff 
           className="logout-icon"
-          style={{fontSize: "20px"}}
+          style={{fontSize: "25px"}}
         />
       </button>
     </span>

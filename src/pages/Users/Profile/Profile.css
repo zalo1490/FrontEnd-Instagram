@@ -4,29 +4,24 @@
   gap: 32px;
 }
 
-.h1 {
+.container .username {
   color:#a9388d;
-  display: flex;
   align-items: center;
-}
-
-h1 {
-  color:#a9388d;
-  display: flex;
-  align-items: center;
+  margin: 0;
+  text-align: center;
+  
 }
 
 .container .avatarinfo {
   display:flex;
   align-items: center;
   margin: 20px 10px 10px;
-  max-width: 0px;
+  max-width: 100px;
   max-height:100px;
 }
 
 .avatarinfo img {
   display: flex;
-  align-items: flex-end;
   object-fit: cover;
   width: 120px;
   height: 120px;
