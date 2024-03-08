@@ -9,19 +9,24 @@
   align-items: center;
   margin: 0;
   text-align: center;
-  
 }
 
-.container .avatarinfo {
-  display:flex;
-  align-items: center;
-  margin: 20px 10px 10px;
-  max-width: 100px;
-  max-height:100px;
+.fileInput {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
 }
 
-.avatarinfo img {
-  display: flex;
+.avatarinfo {
+  margin: 10px 10px 10px ;
+  display:grid;
+  align-items:end;
+}
+
+.container .avatarinfo img {
+  display:grid;
+  align-items:end;
   object-fit: cover;
   width: 120px;
   height: 120px;
@@ -36,3 +41,22 @@
   border-radius: 4px;
 }
 
+
+
+@media (min-width: 300px) and (max-width: 480px) {
+  .container .username {
+    align-items: center;
+    margin: 180px;
+    text-align: center;
+    margin-bottom: 20px;
+  }  
+}
+
+@media (min-width: 480px) and (max-width: 700px)  {
+  .container .username {
+    align-items: center;
+    margin: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+  }  
+}

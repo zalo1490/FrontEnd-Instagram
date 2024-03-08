@@ -1,6 +1,6 @@
 h2 {
   align-items: center;
-  margin: 70px;
+  margin: 90px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -35,7 +35,16 @@ h2 {
 @media (min-width: 300px) and (max-width: 480px) {
   h2 {
     align-items: center;
-    margin: 150px;
+    margin: 170px;
+    text-align: center;
+    margin-bottom: 20px;
+  }  
+}
+
+@media (min-width: 480px) and (max-width: 700px)  {
+  h2 {
+    align-items: center;
+    margin: 170px;
     text-align: center;
     margin-bottom: 20px;
   }  

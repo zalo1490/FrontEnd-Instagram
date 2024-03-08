@@ -38,18 +38,11 @@ const Avatar = ({ editable }) => {
 
   return (
     <div>
-      <label htmlFor="fileInput">
+      <label htmlFor="fileInput" >
         {editable && (
-          <img
+          <img className="fileInput"
             src={preview || addImage}
             alt="Preview"
-            style={{
-              display: "block",
-              margin: "0 auto",
-              maxWidth: "20px",
-              maxHeight: "20px",
-              color: "#d132a9",
-            }}
           />
         )}
       </label>
