@@ -1,10 +1,10 @@
 :root {
-  --line-color-dark: #ccc; /* Define el color de la línea en modo oscuro */
-  --line-color-light: #a9388d; /* Define el color de la línea en modo claro */
-  --current-line-color: var(--line-color-dark); /* Color de línea por defecto */
+  --line-color-dark: #ccc; 
+  --line-color-light: #a9388d; 
+  --current-line-color: var(--line-color-dark); 
 }
 
-/* Cambia el color de la línea cuando el tema está en modo claro */
+
 :root.light-mode {
   --current-line-color: var(--line-color-light);
 }
@@ -25,36 +25,33 @@ header {
   justify-items: center;
   align-items: center;
   background-color: white;
-  border-bottom: 2px solid var(--current-line-color); /* Utiliza la variable para el color de la línea */
+  border-bottom: 2px solid var(--current-line-color); 
 }
 
 header::after {
   content: "";
-  grid-area: 4 / 1 / 5 / -1; /* Coloca el pseudo-elemento en la última fila */
-  border-bottom: 2px solid var(--current-line-color); /* Utiliza la variable para el color de la línea */
+  grid-area: 4 / 1 / 5 / -1; 
+  border-bottom: 2px solid var(--current-line-color); 
 }
 
-/* Otro CSS sigue igual */
 
 
-/* Cambia el color de la línea cuando el tema está en modo claro */
 :root.light-mode header,
 :root.light-mode header::after {
   --line-color: var(--line-color-light);
 }
 
-/* Cambia el color de la línea cuando el tema está en modo oscuro */
+
 :root.dark-mode header,
 :root.dark-mode header::after {
   --line-color: var(--line-color-dark);
 }
 
-/* Aplica el color de la línea según el tema actual */
+
 header, header::after {
   border-bottom-color: var(--line-color);
 }
 
-/* Otro CSS sigue igual */
 
 
 
