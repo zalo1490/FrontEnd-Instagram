@@ -21,7 +21,7 @@
   box-shadow: rgba(37, 36, 38, 0.4) 5px 5px 15px;
 }
 
-.PostsContainer #Post-Image {
+.PostsContainer .Post-Image {
   border-radius: 10px;
   width: 350px;
   height: 550px;
@@ -46,31 +46,11 @@
   color: rgb(71, 66, 66);
 }
 
-.PostContent h3 {
-  text-align: center;
-  position: relative;
-  font-size: 25px;
-  margin: 2px;
-  cursor: pointer;
-  color: rgb(71, 66, 66);
-}
-
 .PostInfo {
   font-size: 18px;
   cursor: pointer;
   color: rgb(57, 51, 51);
 }
-
-.PostInfo #author {
-  font-size: 17px;
-  box-sizing: border-box;
-  flex-direction: column;
-  cursor: pointer;
-  color: rgb(26, 21, 21);
-  text-align: center; 
-}
-
-
 
 .Posts::before {
   content: "";
@@ -95,7 +75,7 @@
   margin: 0px 50px 80px;
 }
 
-.Post-Info .date {
+.PostInfo .date {
   font-size: 15px;
   margin: 0px 0px 0px;
   cursor: pointer;
@@ -110,10 +90,10 @@
 }
 
 @media (min-width: 300px) and (max-width: 700px) {
-  .PostsContainer #Post-Image  {
+  .PostsContainer .Post-Image  {
     border-radius: 10px;
     width: 250px;
-    height: 350px;
+    height: 400px;
     object-fit: cover;
     background-position: center;
     background-size: cover;
@@ -130,30 +110,4 @@
     color: rgb(71, 66, 66);
   }
 
-  .Post-Info {
-    font-size: 15px;
-    cursor: pointer;
-    color: rgb(26, 24, 24);
-  }
-  
-  .Post-Info #author {
-    font-size: 17px;
-    box-sizing: border-box;
-    flex-direction: column;
-    cursor: pointer;
-    color: rgb(26, 24, 24);
-    text-align: center; 
-  }
-  
-  .Post-Info .date {
-    font-size: 12px;
-    cursor: pointer;
-    color: rgb(26, 24, 24);
-  }
-  
-  .Post-Info .time-ago {
-    font-size: 12px;
-    cursor: pointer;
-  }
-  
 }

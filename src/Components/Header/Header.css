@@ -9,8 +9,8 @@ header {
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 
     "gohome   gohome  userinfo"
-    "addpost  lang      theme"
-    "search   search    go";
+    "addpost  lang    theme"
+    "search   search  search";
   justify-items: center;
   align-items: center;
   background-color: white;

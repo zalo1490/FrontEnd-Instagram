@@ -41,7 +41,8 @@ const Posts = ({ data, onDelete, currentUser }) => {
             style={{
               backgroundImage: `url("http://localhost:3000/${data.imagenURL}")`,
             }}
-          ></div>
+          >
+          </div>
           <div className="PostContent">
             <h3>{data.description}</h3>
             <div className="PostInfo">
