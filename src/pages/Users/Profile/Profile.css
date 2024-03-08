@@ -18,15 +18,24 @@
   border-radius: 100px;
 }
 
+.container-avatar {
+ display: grid;
+ grid-template-rows: repeat(3, 1fr);
+ grid-template-columns: repeat(3, 1fr);
+ grid-template-areas: 
+   "gohome   gohome  userinfo"
+   "addpost  lang    theme"
+   "search   search  search";
+ justify-items: center;
+ align-items: center;
+}
+
+
 .avatarinfo {
   margin: 10px 10px 10px ;
-  display:grid;
-  align-items:end;
 }
 
 .container .avatarinfo img {
-  display:grid;
-  align-items:end;
   object-fit: cover;
   width: 120px;
   height: 120px;
