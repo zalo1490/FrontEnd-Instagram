@@ -5,7 +5,7 @@
 }
 
 .container .username {
-  color:#a9388d;
+  color: #a9388d;
   align-items: center;
   margin: 0;
   text-align: center;
@@ -19,20 +19,19 @@
 }
 
 .container-avatar {
- display: grid;
- grid-template-rows: repeat(3, 1fr);
- grid-template-columns: repeat(3, 1fr);
- grid-template-areas: 
-   "gohome   gohome  userinfo"
-   "addpost  lang    theme"
-   "search   search  search";
- justify-items: center;
- align-items: center;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "gohome   gohome  userinfo"
+    "addpost  lang    theme"
+    "search   search  search";
+  justify-items: center;
+  align-items: center;
 }
 
-
 .avatarinfo {
-  margin: 10px 10px 10px ;
+  margin: 10px 10px 10px;
 }
 
 .container .avatarinfo img {
@@ -50,22 +49,20 @@
   border-radius: 4px;
 }
 
-
-
 @media (min-width: 300px) and (max-width: 480px) {
   .container .username {
     align-items: center;
     margin: 180px;
     text-align: center;
     margin-bottom: 20px;
-  }  
+  }
 }
 
-@media (min-width: 480px) and (max-width: 700px)  {
+@media (min-width: 480px) and (max-width: 700px) {
   .container .username {
     align-items: center;
     margin: 100px;
     text-align: center;
     margin-bottom: 20px;
-  }  
+  }
 }

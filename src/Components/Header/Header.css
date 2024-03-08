@@ -4,7 +4,6 @@
   --current-line-color: var(--line-color-dark); 
 }
 
-
 :root.light-mode {
   --current-line-color: var(--line-color-light);
 }
@@ -34,26 +33,19 @@ header::after {
   border-bottom: 2px solid var(--current-line-color); 
 }
 
-
-
 :root.light-mode header,
 :root.light-mode header::after {
   --line-color: var(--line-color-light);
 }
-
 
 :root.dark-mode header,
 :root.dark-mode header::after {
   --line-color: var(--line-color-dark);
 }
 
-
 header, header::after {
   border-bottom-color: var(--line-color);
 }
-
-
-
 
 #gohome {
   grid-area: gohome;
