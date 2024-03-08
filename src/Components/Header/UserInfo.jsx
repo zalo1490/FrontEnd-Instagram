@@ -1,7 +1,7 @@
-import { FaPowerOff } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useMyInfo } from "../../hooks/api";
+import { CgLogOff } from "react-icons/cg";
 import { useUser } from "./../../UserContext";
 import "./Header.css";
 import { FormattedMessage } from "react-intl";
@@ -43,16 +43,12 @@ const UserInfoLoggedIn = () => {
         {info.data.user.username}
       </Link>
 
-      <span className="logout" onClick={() => setUser()}>
-        <FaPowerOff
+      <button className="logout" onClick={() => setUser()}>
+        <CgLogOff 
           className="logout-icon"
-          style={{
-            color: theme === "light" ? "#ffffff" : "#000000",
-            backgroundColor: theme === "light" ? "#000000" : "##FF0000",
-            fontSize: "20px",
-          }}
+          style={{fontSize: "20px"}}
         />
-      </span>
+      </button>
     </span>
   );
 };

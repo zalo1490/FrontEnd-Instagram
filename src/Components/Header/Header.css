@@ -92,8 +92,7 @@ header {
 
 .dark-theme button {
   background-color: #121212; 
-  color: #ffffff; 
-  
+  color: #ffffff;   
 }
 
 @media (min-width: 700px) {
