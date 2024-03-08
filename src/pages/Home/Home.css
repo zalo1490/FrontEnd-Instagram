@@ -30,6 +30,8 @@ h2 {
   text-align: center;
 }
 
+
+
 @media (min-width: 300px) and (max-width: 480px) {
   h2 {
     align-items: center;

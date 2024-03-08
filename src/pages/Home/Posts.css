@@ -1,7 +1,9 @@
 .PostContainer {
+  
   display: inline-block;
   flex-direction: column;
 }
+
 
 .PostsContainer {
   display: inline-block;
