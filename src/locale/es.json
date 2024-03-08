@@ -3,7 +3,7 @@
   "avatar.profile": "Foto de perfil",
   "home.newPost": "Nueva publicación",
   "post.deletePost": "Eliminar publicación",
-  "deleteDescription" :"Quieres eliminar esta publicación?",
+  "deleteDescription": "Quieres eliminar esta publicación?",
   "delete": "Eliminar",
   "cancel": "Cancelar",
   "post.createPost": "Publicar",
@@ -19,5 +19,7 @@
   "register.singIn": "Inicia sesión",
   "posts.author": "Por ",
   "posts.date": " El ",
-  "error-message": "No puedes darle like a tu propio post"
+  "error-message": "No puedes darle like a tu propio post",
+  "timeAgoText.day": "día",
+  "timeAgoText.hour": "hora"
 }

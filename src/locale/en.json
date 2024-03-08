@@ -4,7 +4,7 @@
   "avatar.profile": "Change photo",
   "home.newPost": "New post",
   "post.deletePost": "Delete post",
-  "deleteDescription" :"Do you want to delete this post?",
+  "deleteDescription": "Do you want to delete this post?",
   "delete": "Delete",
   "cancel": "Cancel",
   "post.createPost": "Post",
@@ -19,6 +19,8 @@
   "register.account": "Have an account?",
   "register.singIn": "Sing in",
   "posts.author": "By ",
-  "posts.date": " On " ,
-  "error-message": "You can't like your own post"
+  "posts.date": " On ",
+  "error-message": "You can't like your own post",
+  "timeAgoText.day": "day",
+  "timeAgoText.hour": "hour"
 }

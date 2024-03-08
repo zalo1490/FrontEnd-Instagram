@@ -20,11 +20,23 @@ const Post = ({ onDelete, currentUser }) => {
 
   if (isMoreThanOneDay) {
     const differenceInDays = Math.floor(differenceInHours / 24);
-    timeAgoText = `${differenceInDays} día${differenceInDays === 1 ? "" : "s"}`;
+    timeAgoText = (
+      <>
+        {differenceInDays} <FormattedMessage id="timeAgoText.day" />
+        {differenceInDays !== 1 && (
+          <FormattedMessage id="timeAgoText.days" defaultMessage="s" />
+        )}
+      </>
+    );
   } else {
-    timeAgoText = `${differenceInHours} hora${
-      differenceInHours === 1 ? "" : "s"
-    }`;
+    timeAgoText = (
+      <>
+        {differenceInHours} <FormattedMessage id="timeAgoText.hour" />
+        {differenceInHours !== 1 && (
+          <FormattedMessage id="timeAgoText.hours" defaultMessage="s" />
+        )}
+      </>
+    );
   }
 
   const handleDelete = () => {
