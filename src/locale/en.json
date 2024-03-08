@@ -19,5 +19,6 @@
   "register.account": "Have an account?",
   "register.singIn": "Sing in",
   "posts.author": "By ",
-  "posts.date": " On "
+  "posts.date": " On " ,
+  "error-message": "You can't like your own post"
 }

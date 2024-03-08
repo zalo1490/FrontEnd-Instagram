@@ -18,5 +18,6 @@
   "register.account": "¿Ya tienes cuenta?",
   "register.singIn": "Inicia sesión",
   "posts.author": "Por ",
-  "posts.date": " El "
+  "posts.date": " El ",
+  "error-message": "No puedes darle like a tu propio post"
 }

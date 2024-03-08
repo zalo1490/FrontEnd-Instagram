@@ -40,13 +40,13 @@ const Header = ({ setFiltros }) => {
       
       
       <Link to="/" id="gohome">
-         <button>
+      <button style={{ fontSize: "25px" }}>
          <SlSocialInstagram />
          </button>
       </Link>
       
       <Link to="/posts" id="addpost">
-        <button>
+      <button style={{ fontSize: "25px" }}>
         <IoMdAdd />
         </button>
       </Link>
@@ -66,16 +66,16 @@ const Header = ({ setFiltros }) => {
         value={searchTerm}
         onChange={handleSearchChange}
         />
-        <button>
+        <button style={{ fontSize: "25px" }}>
         <CiSearch />
         </button>
       </form>
 
       <button onClick={toggleTheme} id="theme">
         {theme === "light" ? (
-          <MdDarkMode />
+          <MdDarkMode style={{ fontSize: "25px" }} />
         ) : (
-          <MdSunny />
+          <MdSunny style={{ fontSize: "25px" }} />
         )}
       </button>
       <UserInfo />
