@@ -1,13 +1,3 @@
-:root {
-  --line-color-dark: #ccc; 
-  --line-color-light: #a9388d; 
-  --current-line-color: var(--line-color-dark); 
-}
-
-:root.light-mode {
-  --current-line-color: var(--line-color-light);
-}
-
 header {
   width: 100%;
   position: fixed;
@@ -24,31 +14,19 @@ header {
   justify-items: center;
   align-items: center;
   background-color: white;
-  border-bottom: 2px solid var(--current-line-color); /* Cambié aquí */
+ 
 }
 
 header::after {
   content: "";
   grid-area: 4 / 1 / 5 / -1; 
-  border-bottom: 2px solid var(--current-line-color); /* Cambié aquí */
+ 
 }
 
-:root.light-mode header,
-:root.light-mode header::after {
-  --line-color: var(--line-color-light);
-}
 
-:root.dark-mode header,
-:root.dark-mode header::after {
-  --line-color: var(--line-color-dark);
-}
-
-header, header::after {
-  border-bottom-color: var(--line-color);
-}
 
 .line-color {
-  border-bottom: 4px solid #a9388d; /* Cambiar al color deseado */
+  border-bottom: 4px solid #a9388d; 
 }
 
 
