@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useUserActions } from "../../hooks/api";
+import { FormattedMessage } from "react-intl";
 import "./Like.css";
 
 const Like = ({ postId, initialLiked, likes }) => {
@@ -17,7 +18,7 @@ const Like = ({ postId, initialLiked, likes }) => {
       if (error.response && error.response.data) {
         setErrorMessage(error.response.data.message);
       } else {
-        setErrorMessage("No puedes darle like a tu propio post");
+        setErrorMessage(<FormattedMessage id="error-message" />);
       }
     }
   };

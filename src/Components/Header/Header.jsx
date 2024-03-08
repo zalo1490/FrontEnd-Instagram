@@ -36,38 +36,35 @@ const Header = ({ setFiltros }) => {
   };
 
   return (
-    <header className={theme === "light" ? "light-theme" : "dark-theme"}>
-      
-      
+    <header className={`header ${theme === "light" ? "light-theme" : "dark-theme"}`}>
       <Link to="/" id="gohome">
-      <button style={{ fontSize: "25px" }}>
-         <SlSocialInstagram />
-         </button>
+        <button style={{ fontSize: "25px" }}>
+          <SlSocialInstagram />
+        </button>
       </Link>
       
       <Link to="/posts" id="addpost">
-      <button style={{ fontSize: "25px" }}>
-        <IoMdAdd />
+        <button style={{ fontSize: "25px" }}>
+          <IoMdAdd />
         </button>
       </Link>
 
       <span className="lang">
-      <select value={lang} onChange={(e) => setLang(e.target.value)}>
-        <option value="en">🇬🇧 en</option>
-        <option value="es">🇪🇸 es</option>
-      </select>
+        <select value={lang} onChange={(e) => setLang(e.target.value)}>
+          <option value="en">🇬🇧 en</option>
+          <option value="es">🇪🇸 es</option>
+        </select>
       </span>
       
-
       <form onSubmit={handleSearch} id="search">
         <input
-        type="text"
-        placeholder="Buscar..."
-        value={searchTerm}
-        onChange={handleSearchChange}
+          type="text"
+          placeholder="Buscar..."
+          value={searchTerm}
+          onChange={handleSearchChange}
         />
         <button style={{ fontSize: "25px" }}>
-        <CiSearch />
+          <CiSearch />
         </button>
       </form>
 
