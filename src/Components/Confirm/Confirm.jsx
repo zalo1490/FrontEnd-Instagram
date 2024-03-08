@@ -5,13 +5,13 @@ const Confirm = ({ setShowConfirm, handleOk }) => {
   return (
     <div id="bg">
       <div id="fg">
-        <div class="card-content">
-          <p class="card-heading"><FormattedMessage id="post.deletePost" /></p>
-          <p class="card-description"><FormattedMessage id="deleteDescription" /></p>
+        <div className="card-content">
+          <p className="card-heading"><FormattedMessage id="post.deletePost" /></p>
+          <p className="card-description"><FormattedMessage id="deleteDescription" /></p>
         </div>
-        <div class="card-button-wrapper">
+        <div className="card-button-wrapper">
           <button
-            class="card-button primary"
+            className="card-button primary"
             onClick={() => {
               handleOk();
               setShowConfirm(false);
@@ -20,7 +20,7 @@ const Confirm = ({ setShowConfirm, handleOk }) => {
             <FormattedMessage id="delete" />
           </button>
           <button
-            class="card-button secondary"
+            className="card-button secondary"
             onClick={() => {
               setShowConfirm(false);
             }}
