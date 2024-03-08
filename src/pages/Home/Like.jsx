@@ -29,10 +29,9 @@ const Like = ({ postId, initialLiked, likes }) => {
   };
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center" }}> 
       {errorMessage && (
         <div
-          className="error-message"
           onClick={clearErrorMessage}
           style={{
             color: "black",
@@ -45,11 +44,11 @@ const Like = ({ postId, initialLiked, likes }) => {
             borderRadius: "5px",
             cursor: "pointer"
           }}
-        >
+        > 
           {errorMessage}
         </div>
       )}
-      <button className="Btn" onClick={toggleLike}>
+      <button className="Btn" onClick={toggleLike}> 
         <span className="leftContainer">
           <svg
             fill={liked ? "white" : "white"}

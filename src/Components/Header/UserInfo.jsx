@@ -1,4 +1,6 @@
+import { FaPowerOff } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useMyInfo } from "../../hooks/api";
 import { useUser } from "./../../UserContext";
 import "./Header.css";
@@ -21,8 +23,14 @@ const UserInfo = () => {
 const UserInfoLoggedIn = () => {
   const [, setUser] = useUser();
   const info = useMyInfo();
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
-    <span className="userinfo">
+    <span className={`userinfo ${theme}`}>
       <img src={`http://localhost:3000/${info.data.user.avatar}`} />
       <Link
         to={`/profile/${info.data.user.id}`}
@@ -36,13 +44,12 @@ const UserInfoLoggedIn = () => {
       </Link>
 
       <span className="logout" onClick={() => setUser()}>
-        <img
-          src="/logout-21.svg"
-          alt="logout"
+        <FaPowerOff
+          className="logout-icon"
           style={{
-            margin: "0 auto",
-            maxWidth: "20px",
-            maxHeight: "20px",
+            color: theme === "light" ? "#ffffff" : "#000000",
+            backgroundColor: theme === "light" ? "#000000" : "##FF0000",
+            fontSize: "20px",
           }}
         />
       </span>
@@ -51,3 +58,9 @@ const UserInfoLoggedIn = () => {
 };
 
 export default UserInfo;
+
+
+
+
+
+
