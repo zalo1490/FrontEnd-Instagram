@@ -24,13 +24,13 @@ header {
   justify-items: center;
   align-items: center;
   background-color: white;
-  border-bottom: 2px solid var(--current-line-color); 
+  border-bottom: 2px solid var(--current-line-color); /* Cambié aquí */
 }
 
 header::after {
   content: "";
   grid-area: 4 / 1 / 5 / -1; 
-  border-bottom: 2px solid var(--current-line-color); 
+  border-bottom: 2px solid var(--current-line-color); /* Cambié aquí */
 }
 
 :root.light-mode header,
@@ -46,6 +46,11 @@ header::after {
 header, header::after {
   border-bottom-color: var(--line-color);
 }
+
+.line-color {
+  border-bottom: 4px solid #a9388d; /* Cambiar al color deseado */
+}
+
 
 #gohome {
   grid-area: gohome;
@@ -118,7 +123,7 @@ header, header::after {
 }
 
 .dark-theme nav a {
-  color: #ffffff; /
+  color: #ffffff; 
 }
 
 .dark-theme button {
@@ -136,4 +141,3 @@ header, header::after {
       "search   search    search    search  search";
   }
 }
-

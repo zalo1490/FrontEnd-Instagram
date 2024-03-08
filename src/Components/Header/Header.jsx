@@ -36,7 +36,7 @@ const Header = ({ setFiltros }) => {
   };
 
   return (
-    <header className={`header ${theme === "light" ? "light-theme" : "dark-theme"}`}>
+    <header className={`header ${theme === "light" ? "light-theme" : "dark-theme"} line-color`} >
       <Link to="/" id="gohome">
         <button style={{ fontSize: "25px" }}>
           <SlSocialInstagram />

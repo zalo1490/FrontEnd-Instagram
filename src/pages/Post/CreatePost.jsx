@@ -38,14 +38,12 @@ const CreatePost = () => {
     navigate("/");
   };
 
-//window.location.reload();
-
   const handleDeleteSuccess = () => {
     setPostIdtoDelete(null);
   };
 
   return (
-    <div className="container">
+    <div className={`container ${isDarkMode ? 'dark-mode' : ''}`}>
       <label htmlFor="fileInput">
         <img
           src={preview || addImage}
