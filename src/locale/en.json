@@ -23,5 +23,6 @@
   "error-message": "You can't like your own post",
   "timeAgoText.day": "day",
   "timeAgoText.days": "days",
-  "timeAgoText.hour": "hour"
+  "timeAgoText.hour": "hour",
+  "timeAgoText.hours": "hours"
 }

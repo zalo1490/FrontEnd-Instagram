@@ -22,5 +22,6 @@
   "error-message": "No puedes darle like a tu propio post",
   "timeAgoText.day": "día",
   "timeAgoText.days": "días",
-  "timeAgoText.hour": "hora"
+  "timeAgoText.hour": "hora",
+  "timeAgoText.hours": "horas"
 }

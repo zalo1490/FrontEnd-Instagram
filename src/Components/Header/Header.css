@@ -14,7 +14,6 @@ header {
   justify-items: center;
   align-items: center;
   background-color: white;
-  margin: 15px 0px 0px;
 }
 
 header::after {
@@ -129,6 +128,5 @@ header, header::after {
     grid-template-areas: 
       "gohome   addpost   lang      theme   userinfo"
       "search   search    search    search  search";
-      margin: 8px 0px 0px;
   }
 }

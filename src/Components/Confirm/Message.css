@@ -31,10 +31,32 @@
   color: rgb(27, 27, 27);
 }
 
+.card-button {
+  width: 50%;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.card-button-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 .button-ok {
   background-color: #a9388d;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.button-ok:hover {
+  background-color: #a9388d;
+  color: white;
 }

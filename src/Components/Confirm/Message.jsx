@@ -7,12 +7,14 @@ const Message = ({setShowMessage, handleOk}) => {
         <div className="card-content">
           <p className="card-heading"><FormattedMessage id="message.ok" /></p>
         </div>
+        <div className="card-button-wrapper">
             <button 
             className="button-ok" 
             onClick={()=> {
                 handleOk()
                 setShowMessage(false)
             }}>Ok</button>
+            </div>
             </div>
     </div>
 }
