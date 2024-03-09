@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../UserContext";
 import addImage from "/add-fill-9-512.png";
 import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
 import DeletePost from "./DeletePost";
 import "./CreatePost.css";
 
@@ -13,6 +14,7 @@ const CreatePost = () => {
   const [user] = useUser();
   const navigate = useNavigate();
   const [postIdtoDelete, setPostIdtoDelete] = useState(null);
+  const intl = useIntl();
 
   const handleChange = (e) => {
     const file = e.target.files[0];
@@ -38,7 +40,7 @@ const CreatePost = () => {
     navigate("/");
   };
 
-//window.location.reload();
+  //window.location.reload();
 
   const handleDeleteSuccess = () => {
     setPostIdtoDelete(null);
@@ -68,10 +70,11 @@ const CreatePost = () => {
       <input
         name="description"
         type="text"
-        placeholder="Descripción..."
+        placeholder={intl.formatMessage({ id: "description.placeholder" })}
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
+
       <button onClick={handleSubmit}>
         <FormattedMessage id="post.createPost" />
       </button>
