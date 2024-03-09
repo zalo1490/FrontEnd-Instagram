@@ -1,5 +1,4 @@
 {
-  "home.theme": "Current theme is {theme}",
   "home.welcome": "Welcome to Insta",
   "avatar.profile": "Change photo",
   "home.newPost": "New post",
@@ -7,6 +6,7 @@
   "deleteDescription": "Do you want to delete this post?",
   "delete": "Delete",
   "cancel": "Cancel",
+  "message.ok": "Deleted post",
   "post.createPost": "Post",
   "login.account": "Don't have an account?",
   "login.register": "Sign up",
@@ -22,5 +22,6 @@
   "posts.date": " On ",
   "error-message": "You can't like your own post",
   "timeAgoText.day": "day",
+  "timeAgoText.days": "days",
   "timeAgoText.hour": "hour"
 }

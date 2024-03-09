@@ -78,7 +78,7 @@ const Posts = ({ data, onDelete, currentUser }) => {
                   day="numeric"
                 />
               </span>
-              {" -"}
+              {" - "}
               <span className="time-ago"> {timeAgoText}</span>
             </div>
           </div>

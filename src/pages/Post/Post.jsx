@@ -1,15 +1,20 @@
 import { FormattedDate, FormattedMessage } from "react-intl";
-import { usePostsById } from "../../hooks/api";
+import React, { useState } from "react";
+import { usePostsById, useMyInfo } from "../../hooks/api";
 import { useNavigate } from "react-router-dom";
 import Like from "../Home/Like";
 import DeletePost from "../Post/DeletePost";
 import { useUser } from "../../UserContext";
+import Message from "../../Components/Confirm/message";
 
-const Post = ({ onDelete, currentUser }) => {
+const Post = () => {
   const postId = window.location.pathname.split("/")[2];
   const result = usePostsById(postId);
   const data = result.data.post;
   const [user] = useUser();
+  const info = useMyInfo();
+  const currentUser = info.data?.user;
+  const [showMessage, setShowMessage] = useState(false)
   const navigate = useNavigate();
   const createdAt = new Date(data.createdAt);
   const currentDate = new Date();
@@ -39,10 +44,12 @@ const Post = ({ onDelete, currentUser }) => {
     );
   }
 
-  const handleDelete = () => {
-    if (data && data.id) {
-      onDelete(data.id);
-    }
+  const handlePostDelete = () => {
+    setShowMessage(true)
+  };
+
+  const handleOk = () => {
+   navigate("/");
   };
 
   return (
@@ -85,10 +92,15 @@ const Post = ({ onDelete, currentUser }) => {
       </div>
       <div className="PostActions">
         <Like postId={data.id} likes={data.likes} />
+        
         {currentUser && currentUser.id == data.userId && (
-          <DeletePost postId={data.id} onSuccess={handleDelete} />
+          <DeletePost postId={data.id} onSuccess={handlePostDelete} />
         )}
       </div>
+
+      {showMessage && (
+      <Message setShowMessage={setShowMessage} handleOk={handleOk}/>
+    )}
     </>
   );
 };
