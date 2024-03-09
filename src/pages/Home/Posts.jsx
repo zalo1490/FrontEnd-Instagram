@@ -21,19 +21,21 @@ const Posts = ({ data, onDelete, currentUser }) => {
     const differenceInDays = Math.floor(differenceInHours / 24);
     timeAgoText = (
       <>
-        {differenceInDays} <FormattedMessage id="timeAgoText.day" />
-        {differenceInDays !== 1 && (
-          <FormattedMessage id="timeAgoText.days" defaultMessage="s" />
-        )}
+        {differenceInDays}{" "}
+        <FormattedMessage
+          id={differenceInDays === 1 ? "timeAgoText.day" : "timeAgoText.days"}
+        />
       </>
     );
   } else {
     timeAgoText = (
       <>
-        {differenceInHours} <FormattedMessage id="timeAgoText.hour" />
-        {differenceInHours !== 1 && (
-          <FormattedMessage id="timeAgoText.hours" defaultMessage="s" />
-        )}
+        {differenceInHours}{" "}
+        <FormattedMessage
+          id={
+            differenceInHours === 1 ? "timeAgoText.hour" : "timeAgoText.hours"
+          }
+        />
       </>
     );
   }

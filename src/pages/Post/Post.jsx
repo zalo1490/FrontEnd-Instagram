@@ -14,7 +14,7 @@ const Post = () => {
   const [user] = useUser();
   const info = useMyInfo();
   const currentUser = info.data?.user;
-  const [showMessage, setShowMessage] = useState(false)
+  const [showMessage, setShowMessage] = useState(false);
   const navigate = useNavigate();
   const createdAt = new Date(data.createdAt);
   const currentDate = new Date();
@@ -27,29 +27,31 @@ const Post = () => {
     const differenceInDays = Math.floor(differenceInHours / 24);
     timeAgoText = (
       <>
-        {differenceInDays} <FormattedMessage id="timeAgoText.day" />
-        {differenceInDays !== 1 && (
-          <FormattedMessage id="timeAgoText.days" defaultMessage="s" />
-        )}
+        {differenceInDays}{" "}
+        <FormattedMessage
+          id={differenceInDays === 1 ? "timeAgoText.day" : "timeAgoText.days"}
+        />
       </>
     );
   } else {
     timeAgoText = (
       <>
-        {differenceInHours} <FormattedMessage id="timeAgoText.hour" />
-        {differenceInHours !== 1 && (
-          <FormattedMessage id="timeAgoText.hours" defaultMessage="s" />
-        )}
+        {differenceInHours}{" "}
+        <FormattedMessage
+          id={
+            differenceInHours === 1 ? "timeAgoText.hour" : "timeAgoText.hours"
+          }
+        />
       </>
     );
   }
 
   const handlePostDelete = () => {
-    setShowMessage(true)
+    setShowMessage(true);
   };
 
   const handleOk = () => {
-   navigate("/");
+    navigate("/");
   };
 
   return (
@@ -92,15 +94,15 @@ const Post = () => {
       </div>
       <div className="PostActions">
         <Like postId={data.id} likes={data.likes} />
-        
+
         {currentUser && currentUser.id == data.userId && (
           <DeletePost postId={data.id} onSuccess={handlePostDelete} />
         )}
       </div>
 
       {showMessage && (
-      <Message setShowMessage={setShowMessage} handleOk={handleOk}/>
-    )}
+        <Message setShowMessage={setShowMessage} handleOk={handleOk} />
+      )}
     </>
   );
 };
