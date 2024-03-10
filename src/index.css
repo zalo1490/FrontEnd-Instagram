@@ -1,6 +1,6 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 0;
   font-weight: 400;
   background-color: #ffffff;
   font-synthesis: none;
@@ -13,6 +13,7 @@ a {
   font-weight:bolder;
   color: #a9388d;
   text-decoration: inherit;
+  line-height: 1;
 }
 
 body {

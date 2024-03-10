@@ -44,6 +44,7 @@
   margin: 2px;
   cursor: pointer;
   color: rgb(71, 66, 66);
+  line-height: 1.3;
 }
 
 .PostInfo {
