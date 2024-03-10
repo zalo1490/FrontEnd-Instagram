@@ -65,7 +65,7 @@
 .PostInfo .profile-button {
   display: inline;
   background: none;
-  color: rgb(76, 5, 5);
+  color: rgb(93, 34, 189);
   font-weight: bold;
   padding: 1px;
 }
@@ -86,7 +86,7 @@
   font-size: 15px;
   margin: 0px 0px 0px;
   cursor: pointer;
-  color: rgb(57, 51, 51);
+  color: #a9388d
 }
 
 @media (min-width: 300px) and (max-width: 700px) {
