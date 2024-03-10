@@ -59,9 +59,9 @@ const Posts = ({ data, onDelete, currentUser }) => {
             }}
           ></div>
           <div className="PostContent">
-            <h3 style={{ color: "#a9388d" }}>{data.description}</h3> {/* Cambio de color */}
+            <h3 style={{ color: "#a9388d" }}>{data.description}</h3> 
             <div className="PostInfo">
-              <span className="author" style={{ color: theme === "dark" ? "#ffffff" : "#a9388d" }}> {/* Cambio de color dependiendo del tema */}
+              <span className="author" style={{ color: theme === "dark" ? "#ffffff" : "#a9388d" }}> 
                 <FormattedMessage id="posts.author" />
                 <button
                   className="profile-button"
@@ -74,7 +74,7 @@ const Posts = ({ data, onDelete, currentUser }) => {
                   {data.username}
                 </button>
               </span>
-              <span className="date" style={{ color: "#a9388d" }}> {/* Cambio de color */}
+              <span className="date" style={{ color: "#a9388d" }}> 
                 <FormattedMessage id="posts.date" />
                 <FormattedDate
                   value={data.createdAt}
