@@ -2,12 +2,14 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useUser } from "../../UserContext";
 import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useUser();
   const [error, setError] = useState();
+  const intl = useIntl();
 
   const handleForm = async (event) => {
     event.preventDefault();
@@ -34,18 +36,21 @@ const Login = () => {
         <form onSubmit={handleForm} className="form">
           <input
             name="email"
-            placeholder="Email..."
+            placeholder={intl.formatMessage({ id: "login.emailPlaceholder" })}
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             name="password"
-            placeholder="Contraseña..."
+            placeholder={intl.formatMessage({
+              id: "login.passwordPlaceholder",
+            })}
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+
           <button>
             <FormattedMessage id="login.login" />
           </button>

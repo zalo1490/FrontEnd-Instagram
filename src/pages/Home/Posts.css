@@ -1,14 +1,12 @@
 .PostContainer {
-  
   display: inline-block;
   flex-direction: column;
 }
 
-
 .PostsContainer {
   display: inline-block;
   flex-direction: column;
-  margin: 80px 0px 0px;
+  margin: 100px 0px 0px;
 }
 
 .PostImage {
@@ -25,8 +23,8 @@
 
 .PostsContainer .Post-Image {
   border-radius: 10px;
-  width: 350px;
-  height: 550px;
+  width: 450px;
+  height: 650px;
   object-fit: cover;
   background-position: center;
   background-size: cover;
@@ -94,8 +92,8 @@
 @media (min-width: 300px) and (max-width: 700px) {
   .PostsContainer .Post-Image  {
     border-radius: 10px;
-    width: 250px;
-    height: 400px;
+    width: 300px;
+    height: 450px;
     object-fit: cover;
     background-position: center;
     background-size: cover;
@@ -111,5 +109,4 @@
     cursor: pointer;
     color: rgb(71, 66, 66);
   }
-
 } 
