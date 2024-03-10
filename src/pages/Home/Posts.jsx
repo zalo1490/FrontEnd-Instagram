@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { FormattedDate, FormattedMessage } from "react-intl";
 import { Link, useNavigate } from "react-router-dom";
 import Like from "./Like";
@@ -6,6 +7,7 @@ import { useUser } from "../../UserContext";
 import "./Posts.css";
 
 const Posts = ({ data, onDelete, currentUser }) => {
+  const [theme, setTheme] = useState("light"); 
   const style = {};
   const slug = data.description.toLowerCase().replaceAll(" ", "-");
   const [user] = useUser();
@@ -55,9 +57,9 @@ const Posts = ({ data, onDelete, currentUser }) => {
             }}
           ></div>
           <div className="PostContent">
-            <h3>{data.description}</h3>
+            <h3 style={{ color: "#a9388d" }}>{data.description}</h3> {/* Cambio de color */}
             <div className="PostInfo">
-              <span className="author">
+              <span className="author" style={{ color: theme === "dark" ? "#ffffff" : "#a9388d" }}> {/* Cambio de color dependiendo del tema */}
                 <FormattedMessage id="posts.author" />
                 <button
                   className="profile-button"
@@ -70,7 +72,7 @@ const Posts = ({ data, onDelete, currentUser }) => {
                   {data.username}
                 </button>
               </span>
-              <span className="date">
+              <span className="date" style={{ color: "#a9388d" }}> {/* Cambio de color */}
                 <FormattedMessage id="posts.date" />
                 <FormattedDate
                   value={data.createdAt}
@@ -79,7 +81,7 @@ const Posts = ({ data, onDelete, currentUser }) => {
                 />
               </span>
               {" -"}
-              <span className="time-ago"> {timeAgoText}</span>
+              <span className="time-ago" style={{ color: "#a9388d" }}> {timeAgoText}</span> {/* Cambio de color */}
             </div>
           </div>
         </div>
@@ -95,3 +97,7 @@ const Posts = ({ data, onDelete, currentUser }) => {
 };
 
 export default Posts;
+
+
+
+

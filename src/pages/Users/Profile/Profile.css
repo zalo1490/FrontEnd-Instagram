@@ -56,6 +56,12 @@
     text-align: center;
     margin-bottom: 20px;
   }
+
+  .posts img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 700px) {
