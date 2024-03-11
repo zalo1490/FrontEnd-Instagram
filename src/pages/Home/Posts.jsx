@@ -61,8 +61,8 @@ const Posts = ({ data, onDelete, currentUser }) => {
           <div className="PostContent">
             <h3>{data.description}</h3> 
             <div className="PostInfo">
-              <span className="author" style={{ color: theme === "dark" ? "#ffffff" : "#a9388d" }}> 
-                <FormattedMessage id="posts.author" />
+            <span id="author">
+              <FormattedMessage id="posts.author" />
                 <button
                   className="profile-button"
                   onClick={(e) => {
@@ -74,7 +74,7 @@ const Posts = ({ data, onDelete, currentUser }) => {
                   {data.username}
                 </button>
               </span>
-              <span className="date" style={{ color: "#a9388d" }}> 
+              <span className="date">
                 <FormattedMessage id="posts.date" />
                 <FormattedDate
                   value={data.createdAt}

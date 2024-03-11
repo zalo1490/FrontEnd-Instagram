@@ -88,18 +88,16 @@ const Post = () => {
               />
             </span>
             {" -"}
-            <span className="time-ago">  {timeAgoText}</span>
+            <span className="time-ago"> {timeAgoText}</span>
           </div>
         </div>
       </div>
       <div className="PostActions">
         <Like postId={data.id} likes={data.likes} />
-
         {currentUser && currentUser.id == data.userId && (
           <DeletePost postId={data.id} onSuccess={handlePostDelete} />
         )}
       </div>
-
       {showMessage && (
         <Message setShowMessage={setShowMessage} handleOk={handleOk} />
       )}

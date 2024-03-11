@@ -47,7 +47,7 @@ header, header::after {
 
 .userinfo {
   font-weight:bolder;
-  color: #a9388d;
+  color: #a03384;
   text-decoration: inherit;
   place-items: center;
   grid-area: userinfo ;
@@ -96,9 +96,6 @@ header, header::after {
   color: rgb(71, 66, 66); 
 }
 
-.light-theme nav a {
-  color: rgb(71, 66, 66);
-}
 
 .light-theme button {
   background-color: #ffffff; 

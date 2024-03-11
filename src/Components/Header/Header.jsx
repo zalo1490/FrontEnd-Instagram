@@ -57,8 +57,8 @@ const Header = ({ setFiltros }) => {
 
       <span className="lang">
         <select value={lang} onChange={(e) => setLang(e.target.value)}>
-          <option value="en">🇬🇧 En</option>
           <option value="es">🇪🇸 Es</option>
+          <option value="en">🇬🇧 En</option>
           <option value="it">🇮🇹 It</option>
         </select>
       </span>

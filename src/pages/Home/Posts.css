@@ -1,12 +1,8 @@
-.PostContainer {
-  display: inline-block;
-  flex-direction: column;
-}
-
 .PostsContainer {
   display: inline-block;
   flex-direction: column;
   margin: 100px 0px 0px;
+  font-weight: 300;
 }
 
 .PostImage {
@@ -35,15 +31,6 @@
 
 .PostContent {
   padding: 0.5px;
-}
-
-h3 {
-  text-align: center;
-  position: relative;
-  font-size: 25px;
-  margin: 2px;
-  cursor: pointer;
-  line-height: 1.5;
 }
 
 .PostContent h3 {
