@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../UserContext";
-import addImage from "/add-fill-9-512.png";
+import addImage from "/photo-photography-image-picture_108525 (1).png";
 import { FormattedMessage } from "react-intl";
 import { useIntl } from "react-intl";
 import DeletePost from "./DeletePost";
@@ -47,7 +47,7 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" style={{ position: "relative" }}>
       <label htmlFor="fileInput">
         <img
           src={preview || addImage}
