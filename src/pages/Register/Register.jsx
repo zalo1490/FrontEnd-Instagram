@@ -13,6 +13,7 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [userRegister, setUserRegister] = useState("");
   const intl = useIntl();
+  const [theme, setTheme] = useState("light"); 
 
   const handleForm = async (event) => {
     event.preventDefault();
@@ -34,11 +35,23 @@ const Register = () => {
 
   if (userRegister) {
     return (
-      <h2>
-        <img src="icons8-insta.svg" alt="ClonInsta" />
-        Bienvenido a ClonInsta {username}. Por favor revisa tu correo para que
-        puedas validar tu usuario.
-      </h2>
+      <div className="container">
+        <h2 style={{ textAlign: "center" }}>
+          <img
+            src="icons8-insta.svg"
+            alt="ClonInsta"
+            style={{
+              display: "block",
+              margin: "0 auto",
+              width: "150px",
+              filter: theme === 'dark' ? 'invert(1)' : 'invert(0)', 
+            }}
+          />
+          Bienvenido a ClonInsta {username}. Por favor revisa tu correo para que
+          puedas validar tu usuario.
+          <div className="icon" style={{ fontSize: "36px" }}>🎉🎉🎉</div>
+        </h2>
+      </div>
     );
   }
 
@@ -102,3 +115,5 @@ const Register = () => {
 };
 
 export default Register;
+
+
