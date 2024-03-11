@@ -40,7 +40,6 @@ header, header::after {
   border-bottom: 4px solid #a9388d; 
 }
 
-
 #gohome {
   grid-area: gohome;
   justify-self: left;
@@ -108,7 +107,7 @@ header, header::after {
 
 .dark-theme {
   z-index: 10;
-  background-color: #121212; 
+  background-color: #282828; 
   color: #ffffff; 
 }
 
@@ -117,9 +116,10 @@ header, header::after {
 }
 
 .dark-theme button {
-  background-color: #121212; 
+  background-color: #282828; 
   color: #ffffff;   
 }
+
 
 @media (min-width: 700px) {
   header {

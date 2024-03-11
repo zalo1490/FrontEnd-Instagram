@@ -59,7 +59,7 @@ const Posts = ({ data, onDelete, currentUser }) => {
             }}
           ></div>
           <div className="PostContent">
-            <h3 style={{ color: "#a9388d" }}>{data.description}</h3> 
+            <h3>{data.description}</h3> 
             <div className="PostInfo">
               <span className="author" style={{ color: theme === "dark" ? "#ffffff" : "#a9388d" }}> 
                 <FormattedMessage id="posts.author" />
