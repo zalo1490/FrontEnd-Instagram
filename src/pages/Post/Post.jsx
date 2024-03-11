@@ -88,7 +88,7 @@ const Post = () => {
               />
             </span>
             {" -"}
-            <span className="time-ago"> Hace {timeAgoText}</span>
+            <span className="time-ago">  {timeAgoText}</span>
           </div>
         </div>
       </div>
