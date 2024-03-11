@@ -13,7 +13,7 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [userRegister, setUserRegister] = useState("");
   const intl = useIntl();
-  const [theme, setTheme] = useState("light"); // Aquí asumo que tienes una variable 'theme' para el tema claro u oscuro
+  const [theme, setTheme] = useState("light"); 
 
   const handleForm = async (event) => {
     event.preventDefault();
@@ -44,7 +44,7 @@ const Register = () => {
               display: "block",
               margin: "0 auto",
               width: "150px",
-              filter: theme === 'dark' ? 'invert(1)' : 'invert(0)', // Cambia el color de la imagen según el tema
+              filter: theme === 'dark' ? 'invert(1)' : 'invert(0)', 
             }}
           />
           Bienvenido a ClonInsta {username}. Por favor revisa tu correo para que
