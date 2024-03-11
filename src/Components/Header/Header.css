@@ -1,7 +1,7 @@
 header {
   width: 100%;
   position: fixed;
-  top: 10px;
+  top: 0;
   left: 0;
   right: 0;
   display: grid;
@@ -19,7 +19,7 @@ header {
 header::after {
   content: "";
   grid-area: 4 / 1 / 5 / -1; 
-  border-bottom: 2px solid var(--current-line-color); /* Cambié aquí */
+  border-bottom: 2px solid var(--current-line-color); 
 }
 
 :root.light-mode header,
@@ -66,6 +66,7 @@ header, header::after {
 .lang {
   background-color: rgb(255, 255, 255);
   grid-area: lang ;
+  border-bottom: #a9388d;
 }
 
 #search {
@@ -126,7 +127,7 @@ header, header::after {
     grid-template-rows: 2fr;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
-      "gohome   addpost   lang      theme   userinfo"
-      "search   search    search    search  search";
+      "gohome   addpost   lang     theme   userinfo"
+      "search   search    search   search  search";
   }
 }
