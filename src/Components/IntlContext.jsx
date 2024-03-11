@@ -2,20 +2,21 @@ import { createContext, useContext, useState } from "react";
 import { IntlProvider } from "react-intl";
 import en from "../locale/en.json";
 import es from "../locale/es.json";
+import it from "../locale/it.json";
 
-const messages = { en, es };
+const messages = { en, es, it };
 
 const IntlContext = createContext();
 
 export const MyIntlProvider = ({ children }) => {
-  const [lang, setLang] = useState(navigator.language || "en");
+  const [lang, setLang] = useState(navigator.language || "es");
 
   return (
     <IntlContext.Provider value={[lang, setLang]}>
       <IntlProvider
-        messages={messages[lang] || messages.en}
+        messages={messages[lang] || messages.es}
         locale={lang}
-        defaultLocale="en"
+        defaultLocale="es"
       >
         {children}
       </IntlProvider>
