@@ -20,12 +20,10 @@ const Like = ({ postId, initialLiked, likes }) => {
       } else {
         setErrorMessage(<FormattedMessage id="error-message" />);
       }
-    }
-  };
-
-  const clearErrorMessage = () => {
-    if (errorMessage) {
-      setErrorMessage(null);
+      
+      setTimeout(() => {
+        setErrorMessage(null);
+      }, 2000);
     }
   };
 
@@ -33,7 +31,6 @@ const Like = ({ postId, initialLiked, likes }) => {
     <div style={{ textAlign: "center" }}> 
       {errorMessage && (
         <div
-          onClick={clearErrorMessage}
           style={{
             color: "black",
             position: "fixed",
@@ -42,8 +39,7 @@ const Like = ({ postId, initialLiked, likes }) => {
             transform: "translate(-50%, -50%)",
             backgroundColor: "rgba(255, 255, 255, 0.8)",
             padding: "10px",
-            borderRadius: "5px",
-            cursor: "pointer"
+            borderRadius: "5px"
           }}
         > 
           {errorMessage}
@@ -70,6 +66,7 @@ const Like = ({ postId, initialLiked, likes }) => {
 };
 
 export default Like;
+
 
 
 
