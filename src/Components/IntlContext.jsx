@@ -4,7 +4,7 @@ import en from "../locale/en.json";
 import es from "../locale/es.json";
 import it from "../locale/it.json";
 
-const messages = { en, es, it };
+const messages = { es, en, it };
 
 const IntlContext = createContext();
 
