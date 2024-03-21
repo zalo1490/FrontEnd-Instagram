@@ -19,7 +19,7 @@
 
 2. Clona el repositorio del backend:
 
-    - `git clone https://github.com/MartitaGO/instagram
+    - `git clone https://github.com/MartitaGO/instagram`
 
 3. Instala las dependencias:
     - `npm install`
